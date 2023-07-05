@@ -125,7 +125,7 @@ This element should not render at all until a city is requested. Use an inline s
 
   ---
 
-Because fetching operations can take anywhere from milliseconds to several seconds to complete, it's customary to perform some DOM surgery just prior to launch the API request.
+Because fetching operations can take anywhere from milliseconds to several seconds to complete, it's customary to perform some DOM surgery just prior to launching the API request.
 
 Always working inside your event listener:
 
