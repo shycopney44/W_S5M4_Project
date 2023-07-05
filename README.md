@@ -148,7 +148,7 @@ Always working inside your event listener:
 
   ---
 
-1. **Form a proper URL** using your JavaScript skills, and then use Axios to initiate a GET request to the URL. Make sure to request weather for the correct city!
+1. **Form a proper URL** using your JavaScript skills, and then use Axios to initiate a GET request to the URL. Make sure to request weather for the correct city! You can find out which city got selected by inspecting `event.target.value` inside your event listener.
 
 1. Use Axios to make a GET request to the API.
 
