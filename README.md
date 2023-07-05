@@ -198,7 +198,7 @@ Use your JavaScript powers to extract the proper emoji for a given `weather_desc
 
 Another complication is that the dates are in the `yyyy-mm-dd` format. JavaScript can be used to figure out which day of the week a given date corresponds to. But since time-related code can be particularly tricky, it's OK to ask ChatGPT for a little bit of help here, as long as you study the code it produces to the point where you can re-write it yourself.
 
-❗ Match the mock exactly! If, as an example, an element should contain the text "Thursday", then the text "thurday" is incorrect. Be very detailed-oriented.
+❗ Match the mock exactly! If, as an example, an element should contain the text "Thursday", then the text "thurday" is incorrect. Be very detail-oriented.
 
   ---
 
