@@ -129,7 +129,7 @@ Because fetching operations can take anywhere from milliseconds to several secon
 
 Always working inside your event listener:
 
-1. Disable the dropdown after researching how. **We don't want users making a new selection** until the weather data for the current selection arrives!
+1. Disable the dropdown after researching how. **We don't want users making a new selection** until the weather data for the selected location arrives!
 
 1. Inject text content into p.info that reads `Fetching weather data...`. This acts as **a spinner of sorts**. Always remember: research shows users don't mind waiting a bit, *as long as they're properly entertained* by spinners, animations and such.
 
