@@ -131,6 +131,8 @@ Always working inside your event listener:
 
 1. Disable the dropdown after researching how. **We don't want users making a new selection** until the weather data for the selected location arrives!
 
+1. Modify the inline style on the **div#weatherWidget** to make set the display to 'none'. Every time a user selects a new city, the widget must be hidden away until the request succeeds.
+
 1. Inject text content into p.info that reads `Fetching weather data...`. This acts as **a spinner of sorts**. Always remember: research shows users don't mind waiting for a bit, *as long as they're properly informed and entertained* by spinners, "wait" messages and animations.
 
 ❗ These little things don't sound very interesting, but are in fact important for a good user experience. Most users on the planet leverage slow networks and slow hardware.
