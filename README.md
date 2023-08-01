@@ -27,72 +27,60 @@ You have been given a take-home coding assessment as part of the hiring process 
 
 You can find a [detailed mock](https://w-s5m4-project.herokuapp.com/) showing the desired result. Check out the Network Tab in Dev Tools as you investigate!
 
-To help you complete the challenge, two of your future team members will provide you with instructions and advice.
+Make sure to read and follow the instructions below carefully. Good luck!
 
-Make sure to read and follow their instructions carefully. Good luck!
+### 💾 Setup
 
-### 💾 DevOps Engineer
+**Here are the steps to set up this project:**
 
-**Below, a DevOps Engineer will help you set up your local environment and launch the project:**
+1. **Clone this repository** to your computer, allowing you to run the software locally for development and testing purposes.
 
-This project is a **full-stack web application** that comprises both back-end and front-end components. If deployed to production, the back-end part would run in the cloud (think Amazon Web Services or Azure), while the front-end would execute inside the user's web browser (like Chrome for Android, or Firefox for desktop).
+1. Within your terminal, navigate to the project folder **and execute `npm install`**.
 
-As a front-end engineer, you focus mainly on the files that load **on the user's device**. In this particular case, these files live inside the `frontent` folder. The `backend` folder contains a web server built in Node. This server in particular serves up the `index.html` file on `[GET] /`, and also serves weather data in JSON format on `[GET] /api/weather`.
+1. After successful installation, open two terminal windows at the project folder and **execute `npm start` in your first terminal and `npm test` in your second**.
 
-1. You will **clone this repository** to your computer, allowing you to run the software locally for development and testing purposes.
+1. You will load the app in Chrome by **navigating the browser to `http://localhost:3003`**.
 
-1. You will navigate your terminal to the project folder **and execute `npm install`**. This command will install the libraries declared inside `package.json`. Some of these packages are needed for the back-end to do its job. Other libs help with things like testing and linting your code.
-
-1. After successful installation, you will run, in separate terminals, two of the scripts found inside `package.json`. To do this, **execute `npm start` in your first terminal, and `npm test` in your second**. On successful start, you will load the app in Chrome by **navigating the browser to `http://localhost:3003`**.
-
-1. If you haven't already, install the [Eslint extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) for VSCode. It will highlight syntax errors and problems in your editor, saving tons of time.
+1. If you haven't already, install the [Eslint extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) for VSCode.
 
 1. You will also need [Postman](https://www.postman.com/downloads/) to experiment with the `[GET] /api/weather` endpoint before you start coding.
 
-### 🥷 Lead Developer
+### 🥷 Tasks
 
-**Below, your Team Lead will discuss the tasks you need to complete.**
+**Here is important information for completing your tasks:**
 
-Hey! Let's make sure you're up to speed with your **action items so far**.
+- Inside the `backend` folder there is a web server built in Node which serves weather data in JSON format on `[GET] /api/weather`.
 
-- [x] The app is installed on your machine, with both `start` and `test` scripts running in terminals.
-- [x] You studied the [mock](https://w-s5m4-project.herokuapp.com/).
-- [x] You loaded your app in `http://localhost:3003`.
+- If you look inside the `frontend` folder you will notice it contains, among other assets, an `index.js` file. If you inspect the head element of the `index.html` document, you will find the script being loaded there.
 
-Awesome! Our back-end engineer says that the JSON data needed to build the Learner Cards comes from just one endpoint:
+- You will complete your tasks inside the `frontend/index.js` file. Do not modify any other files. Detailed instructions for each task can be found below.
 
-- [GET] `http://localhost:3003/api/weather`
+- The JSON data needed to build the weather widget comes from just one endpoint: `[GET] http://localhost:3003/api/weather`.
 
-Hey! Let's ensure you're up to speed with your **action items so far**.
+- If you test this endpoint in Postman or in the browser, you should see the server returning JSON containing weather data for the city of San Francisco.
 
-- [x] The app is installed on your machine, with both `start` and `test` scripts running in terminals.
-- [x] You studied the [mock](https://w-s5m4-project.herokuapp.com/).
-- [x] You loaded your app in `http://localhost:3003`.
+- The API currently supports four cities: **Detroit, Honolulu, New York, and San Francisco** (the default).
 
-Awesome! Our back-end engineer says that the JSON data needed to build the Learner Cards comes from just one endpoint:
+- We request weather information for a particular city by using a query string parameter. Here are two examples:
 
-- [GET] `http://localhost:3003/api/weather`
+  ```txt
+  http://localhost:3003/api/weather?city=Detroit
+  http://localhost:3003/api/weather?city=New+York
+  ```
 
-If you test this endpoint in Postman or in the browser, you should see the server returning JSON containing weather data for the city of San Francisco. The API currently supports four cities: **Detroit, Honolulu, New York, and San Francisco** (the default).
+- Query string parameters are the key-value pairs that appear at the end of a URL after a question mark "?" symbol. Ampersands "&" separate them if there is more than one, but in this case there is a single "city" parameter.
 
-We request weather information for a particular city by using a query string parameter. Here are two examples:
+- Try **hitting the endpoint in Postman**. Ensure you can obtain the weather JSON from all four cities before coding.
 
-```txt
-http://localhost:3003/api/weather?city=Detroit
-http://localhost:3003/api/weather?city=New+York
-```
+- Experiment in Postman with deliberately misspelled URLs and city names. Doing so will show you how the request can return errors. Knowing this detail can help you down the line.
 
-Query string parameters are the key-value pairs that appear at the end of a URL after a question mark "?" symbol. Ampersands "&" separate them if there is more than one, but in this case **there is a single "city" parameter**.
+- As you make progress, the behavior of the website will start matching that of the [mock](https://w-s5m4-project.herokuapp.com/).
 
-Try **hitting the endpoint in Postman**. Ensure you can obtain the weather JSON from all four cities before coding.
+- As you complete your tasks, tests will start passing in the terminal. The tests are not exhaustive, but more like "smoke tests" that look for obvious breakage.
 
-Experiment with **deliberately misspelled URLs and city names**. Doing so will show you how the request can return errors. Knowing this detail can help you down the line.
+- Use your attention-to-detail skills to ensure that your site matches the look and behavior of the mock exactly.
 
-As you complete tasks, automated tests will start passing, but **these tests are not exhaustive**. Use your attention-to-detail skills to ensure that your site matches the look and behavior of the mock exactly.
-
-**Let's discuss `index.js` now and the tasks inside it. You are not allowed to modify any other files.**
-
-Have fun, and check out the Solution Video of this project if you get too stuck!
+- Have fun, and check out the Solution Video for this project if you need help!
 
 #### 👉 TASK 1 - Hide the div#weatherWidget
 
