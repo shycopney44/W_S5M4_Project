@@ -49,10 +49,6 @@ Make sure to read and follow the instructions below carefully. Good luck!
 
 **Here is important information for completing your tasks:**
 
-- Inside the `backend` folder there is a web server built in Node which serves weather data in JSON format on `[GET] /api/weather`.
-
-- If you look inside the `frontend` folder you will notice it contains, among other assets, an `index.js` file. If you inspect the head element of the `index.html` document, you will find the script being loaded there.
-
 - You will complete your tasks inside the `frontend/index.js` file. Do not modify any other files. Detailed instructions for each task can be found below.
 
 - The JSON data needed to build the weather widget comes from just one endpoint: `[GET] http://localhost:3003/api/weather`.
