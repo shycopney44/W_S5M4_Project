@@ -34,13 +34,13 @@ async function moduleProject4() {
       evt.target.removeAttribute('disabled')
 
       let { data } = res
-
+        console.log('data')
       document.querySelector('#apparentTemp div:nth-child(2)')
         .textContent = `${data.current.apparent_temperature}°`
       document.querySelector('#todayDescription')
         .textContent = descriptions.find(d => d[0] === data.current.weather_description)[1]
       document.querySelector('#todayStats div:nth-child(1)')
-        .textContent = `${data.current.temperature_min}° /${data.current.temperature_max}°`
+        .textContent = `${data.current.temperature_min}°/${data.current.temperature_max}°`
       document.querySelector('#todayStats div:nth-child(2)')
         .textContent = `Precipitation: ${data.current.precipitation_probability * 100}%`
       document.querySelector('#todayStats div:nth-child(3)')
@@ -48,7 +48,7 @@ async function moduleProject4() {
       document.querySelector('#todayStats div:nth-child(4)')
         .textContent = `Wind: ${data.current.wind_speed}m/s`
 
-      data.forcast.daily.forEach((day, idx) => {
+      data.forecast.daily.forEach((day, idx) => {
         let card = document.querySelectorAll('.next-day')[idx]
 
         let weekDay = card.children[0]
@@ -57,6 +57,7 @@ async function moduleProject4() {
         let precipit = card.children[3]
 
         weekDay.textContent = getWeekDay(day.date)
+        console.log('day;', day)
         apparent.textContent = descriptions.find(d => d[0] === day.weather_description)[1]
         minMax.textContent = `${day.temperature_min}°/${day.temperature_max}°`
         precipit.textContent = `Precipitation: ${day.precipitation_probability * 100}%`
@@ -67,8 +68,12 @@ async function moduleProject4() {
       console.log('😞 Promise rejected with an err.message --> ', err.message)
     }
   })
-  function getWeekDay(date) {
-    return date
+  function getWeekDay(dateString) {
+  const date = new Date(dateString);
+  const dayIndex = date.getDay();
+  const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  const dayName = daysOfWeek[dayIndex]
+    return dayName
   }
   // 👆 WORK WORK ABOVE THIS LINE 👆
 
